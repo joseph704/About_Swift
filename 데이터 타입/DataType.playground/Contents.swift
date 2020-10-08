@@ -69,3 +69,42 @@ var someVar: Any = "yagom"
 someVar = 50
 someVar = 100.1
 
+/*
+ ABOUT_타입별칭
+ */
+typealias MyINT = Int
+typealias YourInt = Int
+let age: MyINT = 100
+var year: YourInt = 2080
+year = age
+/*
+ ABOUT_TUPLE
+ - 튜풀운 타입의 이름이 따로 지정되어 있지 않고, 프로그래머 마음대로 만드는 타입이에요.
+ */
+
+var person: (String, Int, Double) = ("Joseph",26,175)
+print("제 이름은 \(person.0)이고 나이는 \(person.1), 키는 \(person.2)입니다")
+
+// 튜플 요소 이름 지정이 가능합니다. 이게 좋겠죠?
+var anotherPerson: (name: String, age: Int, height: Double) = ("Daniel",31,173)
+print("저희 형의 이름은 \(anotherPerson.name)이고 나이는 \(anotherPerson.age), 키는 \(anotherPerson.height)")
+// 튜플을 타입별칭 할 수 있습니다.
+typealias personTuple = (name: String,age: Int,height: Double)
+var iOSLover: personTuple = ("bigbang", 13, 169)
+print("iOS를 하고 있는 저의 이름은 \(iOSLover.name)이고 나이는 \(iOSLover.age), 키는 \(iOSLover.height)")
+
+/*
+ ABOUT_ARRAY
+ */
+
+// 배열의 선언에는 여러가지가 있죠?
+var firstWayForArray: Array<String> = ["A","B","C"]
+var secondWayForArray: [String] = ["A","B","C"]
+var thirdWayForArray = Array<Any>()
+var fourthWayForArray = [Any]()
+
+// 배열의 사용법 <- 정말 중요합니다. 숙지합시다
+var ArrayForPractice = ["A","B","C","D","E"]
+print(ArrayForPractice[2])
+ArrayForPractice.append("F")
+
