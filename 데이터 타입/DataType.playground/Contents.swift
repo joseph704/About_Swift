@@ -1,33 +1,39 @@
 import UIKit
 
-// 데이터 타입 기본
+// 데이터 타입
+
 /*
- About_Int
+ ABOUT_INT
  - UInt는 0 ~ 2의 64승(64비트의 경우) or 0 ~ 2의 32승(32비트의 경우)
  - UInt는 음수를 담을 수 없다.
  - var unsignedInteger: UInt = -100 // 불가능
 */
+
 var unsignedInteger: UInt64 = 100000
 var integer : Int64 = -100000
 
 /*
- About_Bool
+ ABOUT_BOOL
  - Bool 타입의 toggle함수를 사용해보자 (true - false 반전)
  */
+
 var boolean: Bool = true
 print(boolean.toggle())
 
 /*
- About_Float_And_Double
+ ABOUT_FLOAT_AND_DOUBLE
  - Float 자료형은 수용할 수 있는 범위를 넘어설 수 있다.
  - 자신이 감당할 수 있는 만큼만 남기므로 정확도가 떨어진다.
  */
+
 var floatValue: Float = 1234567890123123123.1
 print(floatValue)
+
 /*
- About_String
+ ABOUT_STRING
  - Character와 마찬가지로 유니코드9를 사용할 수 있다.
  */
+
 // 이니셜라이저를 사용하여 빈 무자열을 생성할 수 있습니다.
 var introduce: String = String()
 
@@ -47,3 +53,19 @@ print(hello.hasSuffix("llo"))
 var bigHello: String = hello.uppercased()
 print(bigHello)
 print(bigHello.lowercased())
+
+/*
+ ABOUT_제어문자
+ - \n : 줄바꿈 문자
+ - \t : 탭 문자
+ - \0 : 문자열이 끝났음을 알리는 null 문자
+ - \" : 문자열 내에서 큰따옴표를 표현
+ */
+
+/*
+ ABOUT_ANY, ANYOBJECT, NIL
+ */
+var someVar: Any = "yagom"
+someVar = 50
+someVar = 100.1
+
